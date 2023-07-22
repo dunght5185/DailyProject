@@ -1,0 +1,211 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  background: #000;
+}
+
+.container {
+  max-width: 600px;
+  margin: 10% auto 0;
+  background: #fff;
+  border-radius: 20px;
+  padding: 15px 15px 15px 40px;
+  position: relative;
+}
+
+.d-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  width: 100%;
+  padding: 10px 15px;
+  display: block;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+  background: #000;
+}
+button:hover {
+  background-image: linear-gradient(to right, red, orange);
+}
+
+.content--block {
+  width: 300px;
+  display: block;
+  margin-right: 40px;
+}
+.content--block h1 {
+  font-size: 30px;
+}
+.content--block ul {
+  list-style: none;
+  padding: 0;
+}
+.content--block ul li {
+  position: relative;
+  padding: 4px 0 4px 30px;
+}
+.content--block ul li::before {
+  content: "";
+  background: url("../images/icon-list.svg") center no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  background-size: 100%;
+}
+.content--block form {
+  width: 100%;
+  display: block;
+}
+.content--block form label {
+  font-weight: bold;
+}
+.content--block form input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #000;
+  display: block;
+  border-radius: 5px;
+  margin: 0 0 20px;
+  box-sizing: border-box;
+}
+.content .img--block {
+  height: 400px;
+  overflow: hidden;
+  width: calc(100% - 300px);
+  background: url("../images/illustration-sign-up-desktop.svg") top center/100% no-repeat;
+}
+
+.modal {
+  display: none;
+}
+.modal--overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgb(0, 0, 0);
+}
+.modal--content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 340px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 90px 30px 30px;
+  border-radius: 15px;
+}
+.modal--content::before {
+  content: "";
+  background: url("../images/icon-success.svg") center no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+.modal h2 {
+  font-size: 30px;
+  margin: 0;
+}
+.modal p {
+  margin: 10px 0 20px;
+}
+
+@media screen and (max-width: 768px) {
+  button {
+    padding: 15px 20px;
+  }
+  .container {
+    max-width: unset;
+    margin: 0;
+    border-radius: unset;
+    padding: 0;
+    height: 100vh;
+    font-size: 1.4em;
+  }
+  .content {
+    flex-direction: column-reverse;
+  }
+  .content--block {
+    width: 100%;
+    margin-right: unset;
+    box-sizing: border-box;
+    padding: 5vw;
+  }
+  .content--block h1 {
+    font-size: 30px;
+  }
+  .content--block ul {
+    list-style: none;
+    padding: 0;
+  }
+  .content--block ul li {
+    padding: 6px 0 6px 30px;
+  }
+  .content--block ul li::before {
+    top: 10px;
+    transform: translateY(0);
+  }
+  .content--block form {
+    width: 100%;
+    display: block;
+  }
+  .content--block form label {
+    font-weight: bold;
+  }
+  .content--block form input {
+    padding: 15px 20px;
+  }
+  .content .img--block {
+    height: 284px;
+    width: 100%;
+    background: url("../images/illustration-sign-up-mobile.svg") top center/100% no-repeat;
+  }
+  .modal {
+    display: none;
+  }
+  .modal--overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+  }
+  .modal--content {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: unset;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 50vw 5vw 10vw;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .modal--content::before {
+    top: 35vw;
+    left: 5vw;
+    width: 50px;
+    height: 50px;
+  }
+}/*# sourceMappingURL=style.css.map */
