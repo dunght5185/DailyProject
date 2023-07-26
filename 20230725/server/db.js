@@ -4,10 +4,9 @@ module.exports = async () => {
     try {
         const connectionParams = {
             useNewUrlParser: true,
-            useCreateIndex: true,
             useUnifiedTopology: true
         }
-        await mongoose.connect('mongodb://localhost/20230725',
+        await mongoose.connect('mongodb://127.0.0.1:27017/20230725',
             connectionParams
         )
         console.log('Connected to DB');
