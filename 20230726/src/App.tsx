@@ -1,7 +1,9 @@
 import Home from "./page/home/Home";
 import Login from "./page/login/Login";
 import Users from "./page/users/Users";
+import User from "./page/user/User";
 import Products from "./page/products/Products";
+import Product from "./page/product/Product";
 import Navbar from "./components/navbar/Navbar";
 import Menu from "./components/menu/Menu";
 //import Content from "./components/content/Content";
@@ -45,14 +47,22 @@ function App() {
           element: <Home />,
         },
         {
-          path: "users",
+          path: "/users",
           element: <Users />,
         },
         {
-          path: "products",
+          path: "/products",
           element: <Products />,
         },
-      ]
+        {
+          path: "/users/:id",
+          element: <User />,
+        },
+        {
+          path: "/products/:id",
+          element: <Product />,
+        },
+      ],
     },
     {
       path: "login",
